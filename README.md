@@ -26,6 +26,8 @@ All demos are browser-based and use only vanilla JavaScript and `<canvas>`.
 
 Open any folder and launch `index.html` in a browser. Each module is standalone and requires no build step or server.
 
+It generates random fractals using a random rule (for CA) or a random kernel (for convolution). Just refresh the page for another random fractal.
+
 ---
 
 ## 🖼️ Previews
