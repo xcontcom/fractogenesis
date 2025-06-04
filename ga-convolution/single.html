@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fractal Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="single.js"></script>
+</head>
+<body>
+    <div class="topbuttons">
+        <button onclick="prev()">← Prev</button>
+        <input type="number" id="indexInput" value="0" min="0" style="width:60px;" oninput="goToIndex()" />
+        <button onclick="next()">Next →</button>
+        <label>Iterations: <input type="number" id="iterations" value="8" min="1" max="16" oninput="draw()" /></label>
+        <label>Zoom: <input type="number" id="zoom" value="1" min="1" max="16" onchange="draw()" /></label>
+    </div>
+    <div style="text-align:center">
+        <canvas id="mainCanvas"></canvas>
+    </div>
+</body>
+</html>

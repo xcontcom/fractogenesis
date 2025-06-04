@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Convolution + GA</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript" src="draw.js"></script>
+</head>
+<body>
+<div class="topbuttons">
+	<input type="button" value="draw" onClick="clearpage();" />
+	<!--input type="button" value="testfitness" onClick="count();" /-->
+	<div id="mp1">Mutations <input type="text" id="mutatepercent" value="5" /> %</div>
+	<input type="button" value="Start evolution" onClick="evolute();" /><input type="button" value="Recreate" onClick="recreate();" />
+</div>
+<div id="canv">
+</div>
+<div class="footerbuttons">
+	<span id="counter-display">Selected: 0</span>
+	<input type="button" value="Select" onClick="selectc();" />
+	<input type="button" value="Select all" onClick="sellectall();" />
+	<input type="button" value="Unselect all" onClick="unsellectall();" />
+</div>
+<div id="console-log0"></div>
+<script>
+	init();		
+</script>
+  <div id="console-log0"></div>
+</body>
+</html>
