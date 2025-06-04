@@ -32,7 +32,19 @@ It generates random fractals using a random rule (for CA) or a random kernel (fo
 
 ## 🖼️ Previews
 
-Add some pictures here, you lazy bastard o_O
+### 2D Cellular Automata
+<img src="images/2dca.png" width="400">
+
+### 2D Convolution
+
+| | | |
+|---|---|---|
+| <img src="images/2dconv1.png" width="400"> | <img src="images/2dconv2.png" width="400"> | <img src="images/2dconv3.png" width="400"> |
+| <img src="images/2dconv4.png" width="400"> | <img src="images/2dconv5.png" width="400"> | <img src="images/2dconv6.png" width="400"> |
+
+### 3D Cellular Automata
+
+<img src="images/3dca.gif" width="400">
 
 ---
 
