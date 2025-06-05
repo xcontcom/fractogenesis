@@ -33,7 +33,10 @@ It generates random fractals using a random rule (for CA) or a random kernel (fo
 ## 🖼️ Previews
 
 ### 2D Cellular Automata
-<img src="images/2dca.png" width="400">
+| | | |
+|---|---|---|
+| <img src="images/011100101100000010.png" width="400"> | <img src="images/000111010101101000.png" width="400"> | <img src="images/001000010110011010.png" width="400"> |
+| <img src="images/001000101111011011.png" width="400"> | <img src="images/001010111000010111.png" width="400"> | <img src="images/001101100000111100.png" width="400"> |
 
 ### 2D Convolution
 
