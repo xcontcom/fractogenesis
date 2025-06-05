@@ -132,30 +132,7 @@ function clearpage(){
 		context.fillStyle = 'rgb(0,0,0)';
 		context.fillRect (0, 0, sizex*size, sizey*size);
 		context.fillStyle = 'rgb(255,255,255)';
-		
-		/*
-		var a=[0];
-		var q;
-		for(var i=1;i<9;i++) a[i]=0;//Math.round(Math.random());
-		for(var i=9;i<sizex;i++){
-			q=''+a[a.length-1]+a[a.length-2]+a[a.length-3]+a[a.length-4]+a[a.length-5]+a[a.length-6]+a[a.length-7]+a[a.length-8]+a[a.length-9];
-			q=parseInt(q, 2);
-			a.push(population[n][q]);
-		}
-		var a2=[0];
-		for(var i=1;i<sizex;i++){
-			if(a[i]==1)
-				a[i]=a[i-1]+1;
-			else
-				a[i]=a[i-1]-1;
-		}
-		for(var x=0;x<sizex;x++){
-			for(var y=0;y<sizey;y++){
-				q=(a[x]+a[y]+512)%4;
-				if(q==0 || q==1) context.fillRect(x*size, y*size, 1, 1);
-			}
-		}
-		*/
+
 		array=[[1]];
 		core=population[n];
 		for(var i=0;i<8;i++){
