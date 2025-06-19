@@ -1,7 +1,5 @@
 # **Fractogenesis: CA vs Conv**
 
-[https://xcont.com/fractogenesis/](https://xcont.com/fractogenesis/)
-
 *Fractal structures grown from a single point using Cellular Automata or Convolution Kernels.*
 
 This project explores six experimental fractal generators, all seeded from a minimal state—often just a single cell. Despite their simplicity, these systems produce intricate, emergent patterns by repeatedly applying either discrete cellular automata rules or continuous convolution filters. Some are manually tunable, others evolve using genetic algorithms.
@@ -30,6 +28,10 @@ All demos are browser-based and use only vanilla JavaScript and `<canvas>`.
 Open any folder and launch `index.html` in a browser. Each module is standalone and requires no build step or server.
 
 It generates random fractals using a random rule (for CA) or a random kernel (for convolution). Just refresh the page for another random fractal.
+
+You can play with it here:
+
+[https://xcont.com/fractogenesis/](https://xcont.com/fractogenesis/)
 
 ---
 
