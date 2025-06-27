@@ -1,5 +1,9 @@
 # **Fractogenesis: CA vs Conv**
 
+![Preview](images/preview_conv.png)
+
+**Try this one: [https://xcont.com/fractogenesis/2d-convolution/single_d_color_static.html](https://xcont.com/fractogenesis/2d-convolution/single_d_color_static.html)**
+
 *Fractal structures grown from a single point using Cellular Automata or Convolution Kernels.*
 
 This project explores six experimental fractal generators, all seeded from a minimal state—often just a single cell. Despite their simplicity, these systems produce intricate, emergent patterns by repeatedly applying either discrete cellular automata rules or continuous convolution filters. Some are manually tunable, others evolve using genetic algorithms.
