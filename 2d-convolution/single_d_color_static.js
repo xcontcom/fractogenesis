@@ -49,36 +49,6 @@ function padding(array, k) {
 	return temp;
 }
 
-function droveLines() {
-	let hueShift=0;
-	document.getElementById('console-log0').innerHTML = `convolution core=${JSON.stringify(core)}`;
-	let array = [[1]];
-	let canvas = document.getElementById('myCanvas');
-	let ctx = canvas.getContext('2d');
-	canvas.width = gridSize;
-	canvas.height = gridSize;
-
-	for (let i = 0; i < iterations; i++) {
-		array = padding(array, pad);         // use 0.5 for smooth expansion
-		array = convolution(array, core);
-	}
-
-	const norm = normalizeContrast(array);
-
-	// draw
-	for (let x = 0; x < gridSize; x++) {
-		for (let y = 0; y < gridSize; y++) {
-			
-			let raw = norm[x][y];
-			raw = (raw + hueShift) % 1;
-			const [r, g, b] = hsvToRgb(raw, 1, 1); // hue=v, full sat+val
-			ctx.fillStyle = `rgb(${r},${g},${b})`;
-			
-			ctx.fillRect(x, y, 1, 1);
-		}
-	}
-}
-
 function hsvToRgb(h, s, v) {
 	let r, g, b;
 	let i = Math.floor(h * 6);
@@ -125,14 +95,44 @@ function normalizeContrast(array) {
 	return result;
 }
 
+let norm = []; // Global
+
 function refreshFractal() {
 	const input = document.getElementById("iterations");
-	iterations = Math.max(6, Math.min(10, parseInt(input.value || "9")));
-	gridSize = Math.pow(2, iterations);
-	
+	const iterations = Math.max(6, Math.min(10, parseInt(input.value || "9")));
+
+	// new core
 	for (let i = 0; i < 5; i++) {
 		core[i] = (Math.random() - 0.5) * 2;
 		core[8 - i] = core[i];
 	}
-	droveLines();
+
+	let array = [[1]];
+	for (let i = 0; i < iterations; i++) {
+		array = padding(array, pad);
+		array = convolution(array, core);
+	}
+
+	norm = normalizeContrast(array); // save normalized data
+	drawFractal(); // draw initial frame
+}
+
+function drawFractal() {
+	const hueShift = parseFloat(document.getElementById("hueShift").value || "0");
+	document.getElementById('console-log0').innerHTML = `convolution core=${JSON.stringify(core)}`;
+	const canvas = document.getElementById("myCanvas");
+	const ctx = canvas.getContext("2d");
+	const gridSize = norm.length;
+
+	canvas.width = gridSize;
+	canvas.height = gridSize;
+
+	for (let x = 0; x < gridSize; x++) {
+		for (let y = 0; y < gridSize; y++) {
+			const raw = (norm[x][y] + hueShift) % 1;
+			const [r, g, b] = hsvToRgb(raw, 1, 1);
+			ctx.fillStyle = `rgb(${r},${g},${b})`;
+			ctx.fillRect(x, y, 1, 1);
+		}
+	}
 }
