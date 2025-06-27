@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CNN Fractals</title>
+<style>
+body{
+	color: #333;
+	background-color: #E0E0E0;
+}
+</style>
+<script type="text/javascript" src="single_d_color_static.js"></script>
+</head>
+<body>
+<div class="fractal" id="myid">
+	<label>Iterations: <input type="number" id="iterations" value="9" min="6" max="10" oninput="refreshFractal()" /></label>
+	<button onclick="refreshFractal()">Refresh</button><br />
+	<div>
+		<canvas id="myCanvas"></canvas>
+	</div>
+</div>
+	<div id="console-log0"></div>
+<div id="footer">
+<script>
+refreshFractal();
+</script>
+<b><div>Github repo: <a href="https://github.com/xcontcom/fractogenesis">https://github.com/xcontcom/fractogenesis</a></div></b>
+</div>
+</body>
+</html>
